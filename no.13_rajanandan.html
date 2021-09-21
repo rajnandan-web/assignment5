@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input type="text " id="res">
+    <button onclick="delay()" >click me here</button>
+</head>
+<body>
+   <script>
+       function delay()
+       {
+let p = new Promise((resolve,reject)=>
+{
+    var a;
+    a=document.getElementById("res").value ;
+    
+    console.log(a);
+    if(a>=3000)
+    {
+        resolve('delay')
+    }
+    else{
+        reject('nodelay')
+    }
+})
+
+p.then((message)=>{
+    alert('output is '+message);
+}).catch((message) => {
+    alert('output is'+message); 
+})
+       }
+   </script> 
+</body>
+</html>
