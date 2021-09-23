@@ -1,0 +1,57 @@
+1].
+=> java is a multithreaded.
+
+multithread in java is a procrss of executing two or more threads simultaniously to maximum utilization of cpu.
+
+
+2].
+=>A promise is a proxy for a value not necessarily known when the promise is created.
+It allow us to associate handleer with an asynchronous actions eventual success value or failure reason.
+=> promises are used to handle asynchronous operations in javascript.
+
+3].
+=> allows you to use the await keyword in its body.
+ When the await keyword is applied, it suspends the calling method and yields control back to its caller until the awaited task is complete. 
+await can only be used inside an async method.
+
+4].
+=>asynchronous function always return a promise.
+
+5].
+=>The consumer function accepts the result or error. Consumer functions can be registered by using the. then,. catch, and. finally methods.
+
+6].
+=>const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+
+ expected output: Array [3, 42, "foo"]
+
+7].
+=>A Promise is in one of these states: pending: initial state, neither fulfilled nor rejected.
+
+8].
+=>A promise is just an object with properties in Javascript. There's no magic to it.
+ So failing to resolve or reject a promise just fails to ever change the state from "pending" to anything else.
+
+
+9].
+=>Since promises can only resolve once (to either fulfilled or rejected), the first resolution wins and any further calls will be ignored. 
+From the docs: In all cases where a promise is resolved (i.e. either fulfilled or rejected), the resolution is permanent and cannot be reset.
+
+
+
+10].
+=>inally() The finally() method returns a Promise . When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed.
+
+
+11].
+=>A microtask is a short function which is executed after the function or program which created it exits and only if the JavaScript execution stack is empty,
+ but before returning control to the event loop being used by the user agent to drive the script's execution environment.
+
